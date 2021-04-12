@@ -94,3 +94,21 @@ Firefox Developer version -- Grid tools
 https://mozilladevelopers.github.io/playground/03-firefox-devtools
 
 </details>
+
+<details>
+  <summary>CSS Grid</summary>
+
+- When you define size of your cells in the grid, the rows/columns follow a numbering system between the gaps.
+
+```
+.col-1 {
+  grid-column: 1/2; // y-axis, first y-gap to second y-gap
+  grid-row: 1/3; // x-axis, first x-gap to third x-gap
+}
+.col-2 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+```
+
+  </details>

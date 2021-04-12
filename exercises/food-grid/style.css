@@ -1,0 +1,86 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+:root {
+  --yellow: #ffc;
+  --purple: #ccf;
+  --pink: #fcf;
+  --teal: #cff;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Geneva, sans-serif;
+}
+
+a {
+  color: #2772b0;
+}
+
+.wrapper {
+  width: 97%;
+  margin: 0 1.5%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* hack to make images flexible in our prototype */
+div img {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* *= means contains */
+[class*='col-'] {
+  border: 1px solid black;
+  padding: 1% 3%;
+}
+
+.col-1-2,
+.col-1-4 {
+  background-color: var(--yellow);
+}
+
+.col-2,
+.col-2-4 {
+  background-color: var(--purple);
+}
+
+.col-3 {
+  background-color: var(--pink);
+}
+
+.col-4 {
+  background-color: var(--teal);
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  [class*='col-'] {
+  }
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
