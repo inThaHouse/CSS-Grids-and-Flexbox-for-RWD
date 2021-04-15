@@ -96,6 +96,16 @@ https://mozilladevelopers.github.io/playground/03-firefox-devtools
 </details>
 
 <details>
+  <summary>Responsive Images</summary>
+
+- Images should change size, based on screen resolution.
+- Do not load a big image and let it scale.
+- Do not load several images and display the one right for the resolution (display: none based on screensize not good!)
+- Protip: use picture tag
+- Protip for loading background images based on screen: Don't have overlapping media queries. use min-width and max-width accordingly to prevent double download.
+</details>
+
+<details>
   <summary>CSS Grid</summary>
 
 - When you define size of your cells in the grid, the rows/columns follow a numbering system between the gaps.
@@ -110,5 +120,9 @@ https://mozilladevelopers.github.io/playground/03-firefox-devtools
   grid-row: 1/3;
 }
 ```
+
+- fr unit reading: https://css-tricks.com/introduction-fr-css-unit/
+- You can name your grid areas in your css based on how you defined your layouts. See property `grid-template-areas`
+- Firefox devtool for grid : https://mozilladevelopers.github.io/playground/css-grid/
 
   </details>
